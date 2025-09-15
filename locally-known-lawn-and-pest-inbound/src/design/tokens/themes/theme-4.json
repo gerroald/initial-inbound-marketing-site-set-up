@@ -1,0 +1,20 @@
+{
+  "name": "theme-4",
+  "label": "Urban Professional",
+  "overrides": {
+    "color": {
+      "primary": "#1E3A8A",
+      "secondary": "#64748B",
+      "accent": "#0EA5E9",
+      "bg": "#FFFFFF",
+      "bgAlt": "#F8FAFC",
+      "fg": "#1E293B",
+      "fgMuted": "#64748B",
+      "border": "#E2E8F0",
+      "success": "#059669",
+      "warning": "#EA580C",
+      "error": "#DC2626",
+      "info": "#3B82F6"
+    }
+  }
+}

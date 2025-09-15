@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OKC Moving Company — Stress‑Free Local & Office Moves | Free Estimate</title>
+  <meta name="description" content="Local & office moving pros in the Oklahoma City metro. Instant quotes, checklists, and expert guides to make moving day easy." />
+
+  <!-- Design Tokens (semantic layer ready) -->
+  <style>
+    :root{
+      /* Brand tokens */
+      --color-brand: #16324F;          /* Navy */
+      --color-accent: #FFFF00;         /* Orange CTA */
+      --color-accent-2: #32C671;       /* Green secondary */
+      --color-surface: #FFFFFF;
+      --color-surface-alt: #F6F8FB;
+      --color-text: #0F172A;
+      --color-text-muted: #475569;
+      --color-border: #E2E8F0;
+      --shadow-1: 0 1px 2px rgba(0,0,0,.06);
+      --shadow-2: 0 6px 16px rgba(0,0,0,.10);
+      /* Typography tokens */
+      --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      --fs-hero: clamp(2rem, 2.5vw + 1.2rem, 3rem);
+      --fs-h2: clamp(1.375rem, 1.5vw + 1rem, 2rem);
+      --fs-body: 1rem;
+      --lh-tight: 1.15;
+      --lh-body: 1.6;
+      /* Spacing tokens */
+      --space-1: .375rem;
+      --space-2: .75rem;
+      --space-3: 1rem;
+      --space-4: 1.5rem;
+      --space-5: 2rem;
+      --space-6: 3rem;
+      --space-7: 4rem;
+      --radius-1: .5rem;
+      --radius-2: .75rem;
+      --radius-3: 1rem;
+      --maxw-wrap: 1200px;
+    }
+
+    /* Base */
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-surface);
+      line-height: var(--lh-body);
+      font-size: var(--fs-body);
+    }
+    .wrap{max-width: var(--maxw-wrap); margin-inline: auto; padding-inline: var(--space-4);}
+    .grid{display:grid; gap: var(--space-4);}
+    .btn{
+      appearance: none; border: 0; cursor: pointer;
+      display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      padding: .75rem 1rem; border-radius: var(--radius-1); font-weight: 600;
+      text-decoration:none;
+    }
+    .btn--primary{ background: var(--color-accent); color: #000; }
+    .btn--secondary{ background: var(--color-brand); color: #FFF; }
+    .btn--ghost{ background: transparent; color: var(--color-brand); border:1px solid var(--color-border); }
+    .btn:focus-visible{ outline: 3px solid color-mix(in oklab, var(--color-accent), #fff 30%); outline-offset: 2px; }
+    .card{
+      background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-2);
+      box-shadow: var(--shadow-1);
+    }
+    .eyebrow{ font-size:.9rem; letter-spacing:.06em; text-transform:uppercase; color:var(--color-text-muted); }
+    .muted{ color: var(--color-text-muted); }
+
+    /* Skip link */
+    .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus{ left:1rem; top:1rem; width:auto; height:auto; background:#fff; padding:.5rem 1rem; border-radius:.5rem; box-shadow:var(--shadow-2); z-index:1000; }
+
+    /* Header */
+    .site-header{ position:sticky; top:0; background:#fff; border-bottom:1px solid var(--color-border); z-index: 50; }
+    .site-header__row{ display:flex; align-items:center; justify-content:space-between; padding: .75rem 0; }
+    .site-brand{ display:flex; align-items:center; gap:.75rem; text-decoration:none; color:var(--color-brand); font-weight:700; }
+    .site-brand__logo{ inline-size:40px; block-size:40px; background: var(--color-brand); border-radius: .4rem; display:inline-block; }
+    .site-nav{ display:flex; gap: .75rem; align-items:center; }
+    .site-nav a{ color: var(--color-text); text-decoration:none; padding:.5rem .6rem; border-radius:.4rem; }
+    .site-nav a:hover{ background: var(--color-surface-alt); }
+    .header-cta{ display:flex; gap:.5rem; align-items:center; }
+
+    /* Hero */
+    .hero{ background: linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 100%); }
+    .hero__wrap{ display:grid; gap: var(--space-5); align-items:center; padding-block: var(--space-6); }
+    .hero__title{ font-size: var(--fs-hero); line-height: var(--lh-tight); margin:0 0 var(--space-3); color: var(--color-brand); }
+    .hero__lede{ margin:0 0 var(--space-4); font-size: 1.1rem; color: var(--color-text-muted); max-width: 65ch; }
+    .hero__actions{ display:flex; gap:.75rem; flex-wrap:wrap; }
+    .hero__panel{ padding: var(--space-4); }
+
+    /* Trust bar */
+    .trustbar{ background: var(--color-surface-alt); border-block:1px solid var(--color-border); }
+    .trustbar__row{ display:flex; gap:1.25rem; flex-wrap:wrap; align-items:center; justify-content:center; padding-block: .9rem; }
+    .trustbar__item{ display:flex; align-items:center; gap:.5rem; color: var(--color-text-muted); }
+
+    /* Services */
+    .section{ padding-block: var(--space-6); }
+    .section__head{ display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom: var(--space-4); }
+    .cards{ display:grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-4); }
+    .cards > .card{ grid-column: span 12; padding: var(--space-4); }
+    @media (min-width: 700px){
+      .hero__wrap{ grid-template-columns: 1.1fr .9fr; }
+      .cards > .card{ grid-column: span 6; }
+    }
+    @media (min-width: 1000px){
+      .cards > .card{ grid-column: span 3; }
+    }
+    .service__icon{ inline-size:44px; block-size:44px; border-radius:.6rem; background: color-mix(in oklab, var(--color-accent), #fff 75%); display:grid; place-items:center; font-weight:700; color: var(--color-accent); }
+    .card h3{ margin:.25rem 0 .5rem; font-size:1.2rem; }
+
+    /* Content hub */
+    .posts{ display:grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-4); }
+    .post{ grid-column: span 12; display:grid; grid-template-rows: 160px auto; overflow:hidden; border-radius: var(--radius-2); }
+    .post__media{ background: #dbeafe; }
+    .post__body{ padding: var(--space-3); }
+    @media (min-width: 900px){
+      .post{ grid-column: span 4; }
+    }
+
+    /* Lead magnet */
+    .leadmag{ background: linear-gradient(90deg, color-mix(in oklab, var(--color-accent), #fff 82%), #fff); border:1px solid var(--color-border); padding: var(--space-5); border-radius: var(--radius-3); box-shadow: var(--shadow-2); }
+    .leadmag form{ display:flex; gap:.5rem; flex-wrap:wrap; }
+    .leadmag input[type="email"]{ padding:.8rem .9rem; border-radius:.6rem; border:1px solid var(--color-border); min-width: 260px; }
+
+    /* Testimonials */
+    .testi{ display:grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-4); }
+    .testi .card{ grid-column: span 12; padding: var(--space-4); }
+    @media (min-width:900px){ .testi .card{ grid-column: span 4; } }
+    .stars{ color: #F59E0B; }
+
+    /* Process */
+    .process{ display:grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-4); counter-reset: step; }
+    .process__item{ grid-column: span 12; background:#fff; border:1px solid var(--color-border); padding: var(--space-4); border-radius: var(--radius-2); position:relative; }
+    .process__item::before{
+      counter-increment: step; content: counter(step);
+      position:absolute; inset-inline-start: -12px; inset-block-start: -12px;
+      background: var(--color-brand); color:#fff; inline-size: 36px; block-size:36px;
+      border-radius: 50%; display:grid; place-items:center; font-weight:700; box-shadow: var(--shadow-2);
+    }
+    @media (min-width: 900px){ .process__item{ grid-column: span 3; } }
+
+    /* FAQ */
+    .faq details{ border:1px solid var(--color-border); border-radius: var(--radius-2); padding: .1rem .9rem; }
+    .faq details + details{ margin-top:.6rem; }
+    .faq summary{ cursor:pointer; padding: .8rem 0; font-weight:600; }
+    .faq p{ margin-top:.2rem; color: var(--color-text-muted); }
+
+    /* Footer */
+    .site-footer{ background: var(--color-brand); color:#cbd5e1; }
+    .site-footer a{ color:#fff; }
+    .site-footer__cols{ display:grid; gap: var(--space-4); grid-template-columns: repeat(12, 1fr); padding-block: var(--space-6); }
+    .site-footer__col{ grid-column: span 12; }
+    @media (min-width: 900px){ .site-footer__col{ grid-column: span 4; } }
+
+    /* Utility */
+    .visually-hidden{ position:absolute!important; inline-size:1px!important; block-size:1px!important; overflow:hidden!important; clip: rect(0 0 0 0)!important; white-space:nowrap!important; border:0!important; padding:0!important; margin:-1px!important; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap site-header__row">
+      <a class="site-brand" href="/" aria-label="Home">
+        <span class="site-brand__logo" aria-hidden="true"></span>
+        <span>MetroMove OKC</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#resources">Resources</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn--ghost" href="tel:+14050000000" aria-label="Call us now">Call</a>
+        <a class="btn btn--primary" href="#quote">Get My Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__wrap">
+        <div class="hero__copy">
+          <p class="eyebrow">Local & Office Moving</p>
+          <h1 id="hero-title" class="hero__title">Stress‑Free Moving, Done by Local Pros</h1>
+          <p class="hero__lede">Reliable residential, office, and delivery services across the OKC metro. Instant quotes, transparent pricing, and friendly movers who treat your things like their own.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#quote">Get My Instant Quote</a>
+            <a class="btn btn--secondary" href="#resources">See Moving Guides</a>
+          </div>
+        </div>
+        <aside class="card hero__panel" aria-labelledby="quick-quote">
+          <h2 id="quick-quote" class="visually-hidden">Quick Quote</h2>
+          <form aria-describedby="qq-desc">
+            <p id="qq-desc" class="muted">Get a ballpark estimate in under a minute.</p>
+            <div class="grid" style="grid-template-columns:1fr 1fr;">
+              <label>From ZIP
+                <input required inputmode="numeric" pattern="[0-9]*" name="from_zip" placeholder="73101" aria-label="From ZIP" />
+              </label>
+              <label>To ZIP
+                <input required inputmode="numeric" pattern="[0-9]*" name="to_zip" placeholder="73102" aria-label="To ZIP" />
+              </label>
+              <label>Home Size
+                <select name="size" aria-label="Home size">
+                  <option>Studio</option><option>1 Bedroom</option>
+                  <option selected>2 Bedroom</option><option>3 Bedroom</option><option>4+ Bedroom</option>
+                </select>
+              </label>
+              <label>Date
+                <input type="date" name="date" />
+              </label>
+              <label style="grid-column:1/-1;">Email
+                <input type="email" name="email" placeholder="you@email.com" />
+              </label>
+            </div>
+            <div style="margin-top:var(--space-3); display:flex; gap:.5rem; flex-wrap:wrap;">
+              <button class="btn btn--primary" type="submit">Get Estimate</button>
+              <a class="btn btn--ghost" href="#quote">Full Quote Form</a>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trustbar" aria-label="Trust and social proof">
+      <div class="wrap trustbar__row">
+        <div class="trustbar__item">⭐️⭐️⭐️⭐️⭐️ 4.9/5 Google</div>
+        <div class="trustbar__item">BBB Accredited</div>
+        <div class="trustbar__item">Insured & Licensed</div>
+        <div class="trustbar__item">500+ Moves in OKC</div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-title" class="h2">Moving & Delivery Services</h2>
+          </div>
+          <a class="btn btn--ghost" href="/services">Explore all services</a>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="service__icon" aria-hidden="true">R</div>
+            <h3>Residential Moving</h3>
+            <p class="muted">Apartments, homes, and townhouses with careful packing and furniture protection.</p>
+            <a class="btn btn--ghost" href="/services/residential-moving">Learn more</a>
+          </article>
+          <article class="card">
+            <div class="service__icon" aria-hidden="true">O</div>
+            <h3>Office & Commercial</h3>
+            <p class="muted">Minimal downtime relocations for offices, studios, and retail spaces.</p>
+            <a class="btn btn--ghost" href="/services/office-moving">Learn more</a>
+          </article>
+          <article class="card">
+            <div class="service__icon" aria-hidden="true">D</div>
+            <h3>Local Delivery</h3>
+            <p class="muted">Store pickups, marketplace deliveries, and same‑day local runs.</p>
+            <a class="btn btn--ghost" href="/services/local-delivery">Learn more</a>
+          </article>
+          <article class="card">
+            <div class="service__icon" aria-hidden="true">P</div>
+            <h3>Packing & Unpacking</h3>
+            <p class="muted">Full‑service packing, supplies, and room‑by‑room organization.</p>
+            <a class="btn btn--ghost" href="/services/packing">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT HUB / RESOURCES -->
+    <section id="resources" class="section" aria-labelledby="resources-title">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Inbound resources</p>
+            <h2 id="resources-title">Guides, Checklists & Local Tips</h2>
+          </div>
+          <a class="btn btn--ghost" href="/blog">Visit the Resource Hub</a>
+        </div>
+        <div class="posts">
+          <article class="post card">
+            <div class="post__media" role="img" aria-label="Cardboard boxes stacked neatly"></div>
+            <div class="post__body">
+              <h3><a href="/blog/moving-day-checklist">The Ultimate Moving Day Checklist (Free Download)</a></h3>
+              <p class="muted">Avoid last‑minute stress with a step‑by‑step list you can print.</p>
+            </div>
+          </article>
+          <article class="post card">
+            <div class="post__media" role="img" aria-label="Office desks and chairs in transit"></div>
+            <div class="post__body">
+              <h3><a href="/blog/office-relocation-plan">Office Relocation Plan: Timeline & Budgeting</a></h3>
+              <p class="muted">How to move your team with minimal downtime.</p>
+            </div>
+          </article>
+          <article class="post card">
+            <div class="post__media" role="img" aria-label="Neighborhood skyline of Oklahoma City"></div>
+            <div class="post__body">
+              <h3><a href="/blog/cost-of-moving-in-okc">What Does Moving Cost in OKC?</a></h3>
+              <p class="muted">DIY vs pro vs hybrid — see what fits your budget.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET -->
+    <section class="section" aria-labelledby="leadmag-title">
+      <div class="wrap">
+        <div class="leadmag">
+          <h2 id="leadmag-title">Get the Moving Day Checklist</h2>
+          <p class="muted">Join 1,000+ locals who use our printable checklist to make moving day a breeze.</p>
+          <form>
+            <label class="visually-hidden" for="email">Email</label>
+            <input id="email" type="email" placeholder="you@email.com" required />
+            <button class="btn btn--secondary" type="submit">Send me the checklist</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">How it works</p>
+            <h2 id="process-title">Plan → Pack → Move → Settle</h2>
+          </div>
+        </div>
+        <div class="process">
+          <div class="process__item">
+            <h3>Plan</h3>
+            <p class="muted">Tell us your dates and details — get an instant estimate and a tailored move plan.</p>
+          </div>
+          <div class="process__item">
+            <h3>Pack</h3>
+            <p class="muted">We can provide supplies or do full‑service packing. Your call.</p>
+          </div>
+          <div class="process__item">
+            <h3>Move</h3>
+            <p class="muted">On time, careful loading, and protected furniture from door to door.</p>
+          </div>
+          <div class="process__item">
+            <h3>Settle</h3>
+            <p class="muted">Unpacking help and debris haul‑away so you can enjoy your new space.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="reviews" class="section" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Customer love</p>
+            <h2 id="reviews-title">What our customers say</h2>
+          </div>
+          <a class="btn btn--ghost" href="/reviews">See all reviews</a>
+        </div>
+        <div class="testi">
+          <figure class="card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>Flawless experience. The crew wrapped everything and finished earlier than quoted.</blockquote>
+            <figcaption class="muted">— Ashley R.</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>They moved our office over a weekend. Monday morning we were up and running.</blockquote>
+            <figcaption class="muted">— Devlin C.</figcaption>
+          </figure>
+          <figure class="card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>Booked online, got a fair price, and they stuck to it. Highly recommend.</blockquote>
+            <figcaption class="muted">— Jordan W.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <details>
+          <summary>How do you price a move?</summary>
+          <p>Distance, home size, crew size, and add‑ons like packing all factor in. Get a fast estimate above.</p>
+        </details>
+        <details>
+          <summary>Are you licensed and insured?</summary>
+          <p>Yes. We carry required licensing and insurance for residential and commercial jobs.</p>
+        </details>
+        <details>
+          <summary>Do you offer packing supplies?</summary>
+          <p>Absolutely — from boxes and tape to wardrobe and TV boxes.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section" aria-labelledby="final-cta-title">
+      <div class="wrap card" style="padding:var(--space-5); display:grid; gap:var(--space-3); align-items:center;">
+        <h2 id="final-cta-title" style="margin:0;">Ready to move?</h2>
+        <p class="muted" style="margin:0;">Get your free estimate and a custom plan for moving day.</p>
+        <div>
+          <a class="btn btn--primary" href="#quote">Get My Free Estimate</a>
+          <a class="btn btn--ghost" href="tel:+14050000000">Talk to a coordinator</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap site-footer__cols">
+      <div class="site-footer__col">
+        <h3>MetroMove OKC</h3>
+        <p>Local & office moving across the Oklahoma City metro.</p>
+        <p><a href="tel:+14050000000">(405) 000‑0000</a><br/><a href="mailto:hello@metromove.example">hello@metromove.example</a></p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/licenses">Licenses</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap" style="padding-bottom:1.25rem;">
+      <small>&copy; <span id="y"></span> MetroMove OKC. All rights reserved.</small>
+    </div>
+
+    <!-- Schema: MovingCompany -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "MetroMove OKC",
+      "url": "https://metromove.example",
+      "telephone": "+1-405-000-0000",
+      "areaServed": "Oklahoma City metropolitan area",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oklahoma City",
+        "addressRegion": "OK",
+        "postalCode": "73102",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.google.com/maps",
+        "https://www.yelp.com"
+      ],
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }]
+    }
+    </script>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "theme-5",
+  "label": "Friendly & Approachable",
+  "overrides": {
+    "color": {
+      "primary": "#2563EB",
+      "secondary": "#0891B2",
+      "accent": "#16A34A",
+      "bg": "#FFFFFF",
+      "bgAlt": "#FEFEFE",
+      "fg": "#374151",
+      "fgMuted": "#9CA3AF",
+      "border": "#E5E7EB",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  }
+}

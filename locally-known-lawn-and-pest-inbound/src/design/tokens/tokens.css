@@ -1,0 +1,20 @@
+:root{
+--color-bg:#FFFFFF;--color-bg-alt:#F7FBF8;--color-fg:#0E1B12;--color-fg-muted:#5B7363;--color-border:#E2EEE7;--color-primary:#0F4D2A;--color-secondary:#2BB673;--color-accent:#2BB673;--color-success:#10B981;--color-warning:#FF9F1C;--color-error:#EF4444;--color-info:#3B82F6;--shadow-1:0 1px 2px rgba(0,0,0,.06);--shadow-2:0 6px 16px rgba(0,0,0,.10);--shadow-3:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);--font-sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,'Helvetica Neue',Arial,'Noto Sans','Liberation Sans',sans-serif;--fs-hero:clamp(2rem,2.5vw + 1.2rem,3rem);--fs-h2:clamp(1.375rem,1.5vw + 1rem,2rem);--fs-h3:clamp(1.125rem,1.25vw + 0.875rem,1.5rem);--fs-body:1rem;--fs-small:.875rem;--lh-tight:1.15;--lh-body:1.6;--space-1:.375rem;--space-2:.75rem;--space-3:1rem;--space-4:1.5rem;--space-5:2rem;--space-6:3rem;--space-7:4rem;--space-8:5rem;--radius-sm:.5rem;--radius-md:.75rem;--radius-lg:1rem;--radius-full:9999px;--maxw-wrap:1200px;--z-dropdown:1000;--z-sticky:1020;--z-fixed:1030;--z-modal-backdrop:1040;--z-modal:1050;--z-popover:1060;--z-tooltip:1070;--bp-sm:640px;--bp-md:768px;--bp-lg:1024px;--bp-xl:1280px;--bp-2xl:1536px}
+
+/* Theme 1: Eco-Fresh Modern */
+[data-theme="theme-1"]{--color-primary:#1B4332;--color-secondary:#6B8E5A;--color-accent:#A8D8A8;--color-bg:#F7F5F3;--color-bg-alt:#FFFFFF;--color-fg:#2C3E50;--color-fg-muted:#5A6C7D;--color-border:#E8F4E8;--color-success:#2E7D32;--color-warning:#F57C00;--color-error:#D84315}
+
+/* Theme 2: Prairie Earth Tones */
+[data-theme="theme-2"]{--color-primary:#8B4513;--color-secondary:#9CAF88;--color-accent:#D4AF37;--color-bg:#F5F5DC;--color-bg-alt:#FFFEF7;--color-fg:#3E2723;--color-fg-muted:#8D6E63;--color-border:#D7CCC8;--color-success:#4E342E;--color-warning:#FF8F00;--color-error:#BF360C}
+
+/* Theme 3: Luxury Chic */
+[data-theme="theme-3"]{--color-primary:#1A237E;--color-secondary:#00695C;--color-accent:#FFD700;--color-bg:#FFFFFF;--color-bg-alt:#FFFEF7;--color-fg:#212121;--color-fg-muted:#757575;--color-border:#E0E0E0;--color-success:#2E7D32;--color-warning:#FF8F00;--color-error:#C62828}
+
+/* Theme 4: Urban Professional */
+[data-theme="theme-4"]{--color-primary:#1E3A8A;--color-secondary:#64748B;--color-accent:#0EA5E9;--color-bg:#FFFFFF;--color-bg-alt:#F8FAFC;--color-fg:#1E293B;--color-fg-muted:#64748B;--color-border:#E2E8F0;--color-success:#059669;--color-warning:#EA580C;--color-error:#DC2626}
+
+/* Theme 5: Friendly & Approachable */
+[data-theme="theme-5"]{--color-primary:#2563EB;--color-secondary:#0891B2;--color-accent:#16A34A;--color-bg:#FFFFFF;--color-bg-alt:#FEFEFE;--color-fg:#374151;--color-fg-muted:#9CA3AF;--color-border:#E5E7EB;--color-success:#10B981;--color-warning:#F59E0B;--color-error:#EF4444}
+
+/* Legacy aliases for current site classes (temporary) */
+:root{--color-brand:var(--color-primary);--color-accent:var(--color-secondary);--color-surface:var(--color-bg);--color-surface-alt:var(--color-bg-alt);--color-text:var(--color-fg);--color-text-muted:var(--color-fg-muted);--color-border:var(--color-border)}

@@ -1,0 +1,185 @@
+{
+  "site": "bird-dog-moving",
+  "description": "Bird Dog Moving interlinking strategy for inbound marketing optimization",
+  "globals": [
+    "moving-inbound-marketing-home.html",
+    "service-residential.html", 
+    "service-office.html",
+    "service-delivery.html",
+    "resource-hub.html",
+    "service-areas.html",
+    "quote.html"
+  ],
+  "patterns": [
+    {
+      "from": "moving-inbound-marketing-home.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Residential Moving"},
+        {"path": "service-office.html", "anchor": "Office & Commercial Moving"},
+        {"path": "service-delivery.html", "anchor": "Local Delivery Services"},
+        {"path": "resource-hub.html", "anchor": "Moving Checklists & Guides"},
+        {"path": "service-areas.html", "anchor": "Cities & Neighborhoods We Serve"},
+        {"path": "quote.html", "anchor": "Get My Moving Quote"}
+      ]
+    },
+    {
+      "from": "service-residential.html",
+      "to": [
+        {"path": "service-office.html", "anchor": "Office Moving Services", "relate": "sibling"},
+        {"path": "service-delivery.html", "anchor": "Local Delivery", "relate": "sibling"},
+        {"path": "resource-hub.html", "anchor": "Residential Moving Guide", "relate": "topic"},
+        {"path": "service-area-edmond.html", "anchor": "Edmond movers", "relate": "nearest:1"},
+        {"path": "service-area-norman.html", "anchor": "Norman movers", "relate": "nearest:1"},
+        {"path": "service-area-moore.html", "anchor": "Moore movers", "relate": "nearest:1"},
+        {"path": "quote.html", "anchor": "Get a Quote"}
+      ]
+    },
+    {
+      "from": "service-office.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Residential Moving", "relate": "sibling"},
+        {"path": "service-delivery.html", "anchor": "Office Delivery", "relate": "sibling"},
+        {"path": "resource-hub.html", "anchor": "Office Relocation Guide", "relate": "topic"},
+        {"path": "service-area-midtown.html", "anchor": "Midtown office movers", "relate": "nearest:1"},
+        {"path": "service-area-bricktown.html", "anchor": "Bricktown office movers", "relate": "nearest:1"},
+        {"path": "quote.html", "anchor": "Get a Quote"}
+      ]
+    },
+    {
+      "from": "service-delivery.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Residential Moving", "relate": "sibling"},
+        {"path": "service-office.html", "anchor": "Office Moving", "relate": "sibling"},
+        {"path": "resource-hub.html", "anchor": "Delivery Planning Guide", "relate": "topic"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "quote.html", "anchor": "Get a Quote"}
+      ]
+    },
+    {
+      "from": "service-areas.html",
+      "to": [
+        {"path": "service-area-edmond.html", "anchor": "Edmond Moving"},
+        {"path": "service-area-norman.html", "anchor": "Norman Moving"},
+        {"path": "service-area-moore.html", "anchor": "Moore Moving"},
+        {"path": "service-area-yukon.html", "anchor": "Yukon Moving"},
+        {"path": "service-area-plaza-district.html", "anchor": "Plaza District Moving"},
+        {"path": "service-area-midtown.html", "anchor": "Midtown Moving"},
+        {"path": "service-area-bricktown.html", "anchor": "Bricktown Moving"}
+      ]
+    },
+    {
+      "from": "service-area-edmond.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Edmond Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-norman.html", "anchor": "Nearby: Norman", "relate": "nearby:1"},
+        {"path": "service-area-midtown.html", "anchor": "Nearby: Midtown", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Edmond Quote"}
+      ]
+    },
+    {
+      "from": "service-area-norman.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Norman Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-edmond.html", "anchor": "Nearby: Edmond", "relate": "nearby:1"},
+        {"path": "service-area-moore.html", "anchor": "Nearby: Moore", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Norman Quote"}
+      ]
+    },
+    {
+      "from": "service-area-moore.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Moore Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-norman.html", "anchor": "Nearby: Norman", "relate": "nearby:1"},
+        {"path": "service-area-yukon.html", "anchor": "Nearby: Yukon", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Moore Quote"}
+      ]
+    },
+    {
+      "from": "service-area-yukon.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Yukon Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-moore.html", "anchor": "Nearby: Moore", "relate": "nearby:1"},
+        {"path": "service-area-plaza-district.html", "anchor": "Nearby: Plaza District", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Yukon Quote"}
+      ]
+    },
+    {
+      "from": "service-area-plaza-district.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Plaza District Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-yukon.html", "anchor": "Nearby: Yukon", "relate": "nearby:1"},
+        {"path": "service-area-midtown.html", "anchor": "Nearby: Midtown", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Plaza District Quote"}
+      ]
+    },
+    {
+      "from": "service-area-midtown.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Midtown Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-plaza-district.html", "anchor": "Nearby: Plaza District", "relate": "nearby:1"},
+        {"path": "service-area-bricktown.html", "anchor": "Nearby: Bricktown", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Midtown Quote"}
+      ]
+    },
+    {
+      "from": "service-area-bricktown.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Local Moving"},
+        {"path": "service-office.html", "anchor": "Commercial & Office Moving"},
+        {"path": "resource-hub.html", "anchor": "Bricktown Moving Guides"},
+        {"path": "service-areas.html", "anchor": "All Service Areas"},
+        {"path": "service-area-midtown.html", "anchor": "Nearby: Midtown", "relate": "nearby:1"},
+        {"path": "quote.html", "anchor": "Get My Bricktown Quote"}
+      ]
+    },
+    {
+      "from": "resource-hub.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Residential Moving"},
+        {"path": "service-office.html", "anchor": "Office Moving"},
+        {"path": "service-delivery.html", "anchor": "Delivery Services"},
+        {"path": "service-areas.html", "anchor": "Find Your Area"},
+        {"path": "quote.html", "anchor": "Get a Quote"}
+      ]
+    },
+    {
+      "from": "quote.html",
+      "to": [
+        {"path": "service-residential.html", "anchor": "Residential Moving"},
+        {"path": "service-office.html", "anchor": "Office Moving"},
+        {"path": "service-delivery.html", "anchor": "Delivery Services"},
+        {"path": "resource-hub.html", "anchor": "Moving Guides"},
+        {"path": "service-areas.html", "anchor": "Service Areas"}
+      ]
+    }
+  ],
+  "rules": {
+    "strict": true,
+    "preferIntentionBased": true,
+    "anchorTextFormat": "intent + entity",
+    "examples": [
+      "Office moving in Midtown",
+      "Edmond local movers", 
+      "Moore residential moving",
+      "Norman office relocation"
+    ]
+  }
+}

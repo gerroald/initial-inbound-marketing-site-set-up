@@ -1,0 +1,39 @@
+{
+  "name": "bird-dog-moving-inbound",
+  "version": "1.0.0",
+  "description": "Bird Dog Moving inbound marketing website with centralized design tokens and strategic interlinking",
+  "main": "index.html",
+  "scripts": {
+    "migrate": "node scripts/apply-tokens.js && node scripts/apply-interlinking-map.js",
+    "check:tokens": "node scripts/verify-design-tokens.js",
+    "check:links": "node scripts/check-links.js",
+    "check:all": "npm run check:tokens && npm run check:links",
+    "apply:tokens": "node scripts/apply-tokens.js",
+    "apply:links": "node scripts/apply-interlinking-map.js",
+    "dev": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "moving",
+    "okc",
+    "design-tokens",
+    "interlinking",
+    "inbound-marketing"
+  ],
+  "author": "Bird Dog Moving",
+  "license": "MIT",
+  "devDependencies": {
+    "glob": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bird-dog-moving/inbound-marketing-site"
+  },
+  "bugs": {
+    "url": "https://github.com/bird-dog-moving/inbound-marketing-site/issues"
+  },
+  "homepage": "https://github.com/bird-dog-moving/inbound-marketing-site#readme"
+}

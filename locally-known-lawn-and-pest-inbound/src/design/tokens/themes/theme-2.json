@@ -1,0 +1,20 @@
+{
+  "name": "theme-2",
+  "label": "Prairie Earth Tones",
+  "overrides": {
+    "color": {
+      "primary": "#8B4513",
+      "secondary": "#9CAF88",
+      "accent": "#D4AF37",
+      "bg": "#F5F5DC",
+      "bgAlt": "#FFFEF7",
+      "fg": "#3E2723",
+      "fgMuted": "#8D6E63",
+      "border": "#D7CCC8",
+      "success": "#4E342E",
+      "warning": "#FF8F00",
+      "error": "#BF360C",
+      "info": "#3B82F6"
+    }
+  }
+}

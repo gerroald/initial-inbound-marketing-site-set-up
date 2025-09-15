@@ -1,0 +1,19 @@
+{
+  "name": "current",
+  "overrides": {
+    "color": {
+      "bg": "#FFFFFF",
+      "bgAlt": "#F7FBF8",
+      "fg": "#0E1B12",
+      "fgMuted": "#5B7363",
+      "border": "#E2EEE7",
+      "primary": "#0F4D2A",
+      "secondary": "#2BB673",
+      "accent": "#2BB673",
+      "success": "#10B981",
+      "warning": "#FF9F1C",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  }
+}

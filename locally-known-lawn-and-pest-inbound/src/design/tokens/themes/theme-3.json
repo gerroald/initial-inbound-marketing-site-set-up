@@ -1,0 +1,20 @@
+{
+  "name": "theme-3",
+  "label": "Luxury Chic",
+  "overrides": {
+    "color": {
+      "primary": "#1A237E",
+      "secondary": "#00695C",
+      "accent": "#FFD700",
+      "bg": "#FFFFFF",
+      "bgAlt": "#FFFEF7",
+      "fg": "#212121",
+      "fgMuted": "#757575",
+      "border": "#E0E0E0",
+      "success": "#2E7D32",
+      "warning": "#FF8F00",
+      "error": "#C62828",
+      "info": "#3B82F6"
+    }
+  }
+}

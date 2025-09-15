@@ -1,0 +1,117 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8' /><meta name='viewport' content='width=device-width, initial-scale=1' /><title>Home | Locally Known Lawn & Pest</title><meta name='description' content='Lawn care and pest control in the OKC metro.' /><script>(function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);} }catch(e){}})();</script><link rel='stylesheet' href='src/design/tokens/tokens.css' /><style>
+html,body{height:100%}body{margin:0;font-family:var(--font-sans);color:var(--color-text);background:var(--color-surface);line-height:var(--lh-body);font-size:var(--fs-body)}
+.wrap{max-width:var(--maxw-wrap);margin-inline:auto;padding-inline:var(--space-4)}
+.grid{display:grid;gap:var(--space-4)}
+.btn{appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1rem;border-radius:var(--radius-1);font-weight:600;text-decoration:none}
+.btn--primary{background:var(--color-accent);color:#fff}.btn--secondary{background:var(--color-brand);color:#fff}.btn--ghost{background:transparent;color:var(--color-brand);border:1px solid var(--color-border)}
+.card{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-2);box-shadow:var(--shadow-1)}
+.eyebrow{font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-muted)}
+.muted{color:var(--color-text-muted)}.pill{background:var(--color-surface-alt);border:1px solid var(--color-border);padding:.4rem .7rem;border-radius:999px;font-size:.9rem}
+.pill-list{display:flex;gap:.5rem;flex-wrap:wrap}
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--color-border);z-index:50}
+.site-header__row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+.site-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--color-brand);font-weight:800}
+.site-brand__logo{inline-size:40px;block-size:40px;background:url('assets/logo-placeholder.png') center/cover, var(--color-brand);border-radius:.4rem;display:inline-block}
+.site-nav{display:flex;gap:.75rem;align-items:center}
+.site-nav a{color:var(--color-text);text-decoration:none;padding:.5rem .6rem;border-radius:.4rem}.site-nav a:hover{background:var(--color-surface-alt)}
+.hero{background:linear-gradient(180deg,#F2FCF6 0%,#FFFFFF 100%)}.hero__wrap{display:grid;gap:var(--space-5);align-items:center;padding-block:var(--space-6)}.hero__title{font-size:var(--fs-hero);line-height:var(--lh-tight);margin:0 0 var(--space-3);color:var(--color-brand)}.hero__lede{margin:0 0 var(--space-4);font-size:1.1rem;color:var(--color-text-muted);max-width:65ch}
+.hero__media{inline-size:100%;block-size:min(40vh,380px);border-radius:var(--radius-2);background:#d1f7df url('assets/hero-generic.jpg') center/cover no-repeat;border:1px solid var(--color-border)}
+.section{padding-block:var(--space-6)}.section__head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:var(--space-4)}
+.thumb{inline-size:100%;block-size:160px;border-radius:var(--radius-2);background:#e7f6ee;border:1px solid var(--color-border);background-size:cover;background-position:center}
+.site-footer{background:var(--color-brand);color:#d9efe3}.site-footer a{color:#fff}
+.site-footer__cols{display:grid;gap:var(--space-4);grid-template-columns:repeat(12,1fr);padding-block:var(--space-6)}.site-footer__col{grid-column:span 12}@media (min-width:900px){.site-footer__col{grid-column:span 4}}
+.visually-hidden{position:absolute!important;inline-size:1px!important;block-size:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important;padding:0!important;margin:-1px!important}
+.grid-12{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--space-4)}
+.grid-12--span-12{grid-column:span 12}
+.grid-12--span-6{grid-column:span 6}
+.grid-12--span-4{grid-column:span 4}
+.grid-12--span-3{grid-column:span 3}
+.p-4{padding:var(--space-4)}
+.p-5{padding:var(--space-5)}
+.pb-5{padding-bottom:var(--space-5)}
+.mt-0{margin-top:0}
+.mb-0{margin-bottom:0}
+.text-center{text-align:center}
+.text-left{text-align:left}
+.text-right{text-align:right}
+.flex{display:flex}
+.flex-col{flex-direction:column}
+.items-center{align-items:center}
+.justify-center{justify-content:center}
+.justify-between{justify-content:space-between}
+.gap-3{gap:var(--space-3)}
+.gap-4{gap:var(--space-4)}
+.w-full{width:100%}
+.h-full{height:100%}
+.hero__media{background-image:url('assets/hero-home.jpg'), linear-gradient(#d1f7df,#d1f7df);}
+@media (min-width:768px){.md\:grid-12--span-6{grid-column:span 6}.md\:grid-12--span-4{grid-column:span 4}.md\:flex-row{flex-direction:row}.md\:text-left{text-align:left}}
+@media (min-width:1024px){.lg\:grid-12--span-4{grid-column:span 4}.lg\:grid-12--span-3{grid-column:span 3}}</style></head><body>
+<header class="site-header" role="banner">
+  <div class="wrap site-header__row">
+    <a class="site-brand" href="index.html" aria-label="Home">
+      <span class="site-brand__logo" aria-hidden="true"></span>
+      <span>Locally Known Lawn & Pest</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="services-lawn.html">Lawn</a>
+      <a href="services-pest.html">Pest</a>
+      <a href="resource-hub.html">Resources</a>
+      <a href="service-areas.html">Service Areas</a>
+      <a href="quote.html" class="btn btn--primary">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+<main id='main' tabindex='-1'>
+<section class="hero"><div class="wrap hero__wrap"><div>
+  <p class="eyebrow">Local experts</p><h1 class="hero__title">Your Lawn Healthy. Your Home Pest‑Free.</h1>
+  <p class="hero__lede">Seasonal lawn care plans and targeted pest control — safe, effective, and guaranteed in the OKC metro.</p>
+  <div class="hero__actions"><a class="btn btn--primary" href="quote.html">Get My Free Estimate</a><a class="btn btn--ghost" href="resource-hub.html">See Guides & Calendars</a></div>
+  <div class="pill-list" style="margin-top:.75rem"><a class="pill" href="pests.html">Pest Profiles</a><a class="pill" href="grass-weeds.html">Grass & Weed Profiles</a><a class="pill" href="service-areas.html">Cities & Neighborhoods</a></div>
+</div><div class="hero__media" role="img" aria-label="Healthy lawn and home"></div></div></section>
+
+<section class="section"><div class="wrap"><div class="section__head"><div><p class="eyebrow">Services</p><h2>What we can do for you</h2></div></div>
+  <div class="grid-12">
+    <a class="card grid-12--span-12 p-4" href="services-lawn.html"><div class="thumb" style="background-image:url('assets/card-lawn.jpg')"></div><h3 class="mt-0" style="margin:.8rem 0 0">Lawn Care & Weed Control</h3><p class="muted">Fertilization programs, weed control, aeration, overseeding & sod.</p></a>
+    <a class="card grid-12--span-12 p-4" href="services-pest.html"><div class="thumb" style="background-image:url('assets/card-pest.jpg')"></div><h3 class="mt-0" style="margin:.8rem 0 0">Pest Control</h3><p class="muted">Quarterly pest protection, mosquito control, termite treatment & more.</p></a>
+    <a class="card grid-12--span-12 p-4" href="pests.html"><div class="thumb" style="background-image:url('assets/card-pests.jpg')"></div><h3 class="mt-0" style="margin:.8rem 0 0">Pest Profiles</h3><p class="muted">ID tips and control options for common pests.</p></a>
+    <a class="card grid-12--span-12 p-4" href="grass-weeds.html"><div class="thumb" style="background-image:url('assets/card-grassweeds.jpg')"></div><h3 class="mt-0" style="margin:.8rem 0 0">Grass & Weed Profiles</h3><p class="muted">Know your turf and the weeds you’re fighting.</p></a>
+    <a class="card grid-12--span-12 p-4" href="service-areas.html"><div class="thumb" style="background-image:url('assets/card-areas.jpg')"></div><h3 class="mt-0" style="margin:.8rem 0 0">Cities & Neighborhoods</h3><p class="muted">Find your area and get local pricing.</p></a>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap card p-5">
+  <h2 class="mt-0">Get your custom lawn & pest plan</h2><p class="muted">Answer a few questions and we'll send a tailored plan with transparent pricing.</p>
+  <a class="btn btn--primary" href="quote.html">Start My Estimate</a>
+</div></section>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap site-footer__cols">
+    <div class="site-footer__col">
+      <h3>Locally Known Lawn & Pest</h3>
+      <p>Healthy lawns and pest-free homes across the OKC metro.</p>
+      <p><a href="tel:+14050000000">(405) 000‑0000</a><br/><a href="mailto:hello@locallyknown.example">hello@locallyknown.example</a></p>
+    </div>
+    <div class="site-footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resource-hub.html">Resource Hub</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+      </ul>
+    </div>
+    <div class="site-footer__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Licenses</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap pb-5">
+    <small>&copy; <span id="y"></span> Locally Known. All rights reserved.</small>
+  </div>
+  <link rel="icon" type="image/png" href="assets/logo-placeholder.png">
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
+</body></html>

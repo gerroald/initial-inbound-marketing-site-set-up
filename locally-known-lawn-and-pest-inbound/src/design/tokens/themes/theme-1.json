@@ -1,0 +1,20 @@
+{
+  "name": "theme-1",
+  "label": "Eco-Fresh Modern",
+  "overrides": {
+    "color": {
+      "primary": "#1B4332",
+      "secondary": "#6B8E5A",
+      "accent": "#A8D8A8",
+      "bg": "#F7F5F3",
+      "bgAlt": "#FFFFFF",
+      "fg": "#2C3E50",
+      "fgMuted": "#5A6C7D",
+      "border": "#E8F4E8",
+      "success": "#2E7D32",
+      "warning": "#F57C00",
+      "error": "#D84315",
+      "info": "#3B82F6"
+    }
+  }
+}
